@@ -4,3 +4,8 @@ venv/
 .env
 .env.*
 !.env.example
+automatedPatching/1stopServices/stop_E920.wlst
+automatedPatching/1stopServices/stop_E920Copy.wlst
+automatedPatching/setAutoPatchEnv.bat
+automatedPatching/AutoPatch-*
+
