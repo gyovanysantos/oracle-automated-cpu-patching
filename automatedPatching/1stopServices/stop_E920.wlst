@@ -1,0 +1,7 @@
+exitonerror=false;
+nmConnect('weblogic','WqSc7Bptdb',host='localhost', port='5556',domainName='base_domain',domainDir='C:/Oracle/Middleware/Oracle_Home/user_projects/domains/base_domain',nmType='ssl')
+nmKill('JWEB05_JAS_PD920_8191')
+nmKill('JWEB05_JAS_PD920_8190')
+nmKill('JWEB05_AIS_PD920_8291')
+stopNodeManager()
+exit()
