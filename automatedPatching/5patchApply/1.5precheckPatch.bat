@@ -25,7 +25,7 @@ for /d %%D in (%WLS%\*) do (
 REM Pre-check Patching
 %drive%
 cd %WLS_PATCH%
-spbat.bat -phase precheck -oracle_home %ORACLE_HM% >> %LOG_FILE%
+spbat.bat -phase precheck -oracle_home %ORACLE_HM% -log_dir %SCRIPTS%
 rem IF NOT ERRORLEVEL 1 echo SUCCESS: PRE-PATCH RAN SUCCESSFULLY. >> %LOG_FILE%
 IF NOT ERRORLEVEL 1 spbat.bat -phase apply -oracle_home %ORACLE_HM% >> %LOG_FILE%
 IF     ERRORLEVEL 1 echo PATCH failed. Check the issue and run the patch commands manually... & set ERRORLEVEL=0 & echo ERROR: PATCH Script Ended in Error. Check the Log. >> %LOG_FILE%  & PAUSE
