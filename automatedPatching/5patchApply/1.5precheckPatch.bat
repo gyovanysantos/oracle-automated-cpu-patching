@@ -1,5 +1,5 @@
 @echo off
-rem Call D:\scripts\automatedPatching\setAutoPatchEnv.bat
+:: Call D:\scripts\automatedPatching\setAutoPatchEnv.bat
 
 echo ========================================================== >> %LOG_FILE%
 echo STARTING PRE-PATCHING >> %LOG_FILE%
@@ -9,7 +9,7 @@ echo STARTING PRE-PATCHING
 echo ==========================================================
 
 ::DISCOVERING PATCH NAME
-:: List directories inside WLS folder - Actually catching the patching dir name
+:: The code below is used to discover the patch name from the WLS patch directory since each patch has a different version number.
 setlocal enabledelayedexpansion
 
 set "unique_folder="
@@ -22,12 +22,12 @@ for /d %%D in (%WLS%\*) do (
 	set WLS_PATCH=%WLS%\!unique_folder!\tools\spbat\generic\SPBAT
 )
 
-REM Pre-check Patching
+:: Pre-check Patching
 %drive%
 cd %WLS_PATCH%
-spbat.bat -phase precheck -oracle_home %ORACLE_HM% -log_dir %SCRIPTS%
-rem IF NOT ERRORLEVEL 1 echo SUCCESS: PRE-PATCH RAN SUCCESSFULLY. >> %LOG_FILE%
-IF NOT ERRORLEVEL 1 spbat.bat -phase apply -oracle_home %ORACLE_HM% -log_dir %SCRIPTS%
+call spbat.bat -phase precheck -oracle_home %ORACLE_HM% -log_dir %SCRIPTS%
+IF     ERRORLEVEL 1 echo PRE-PATCH failed. Check the issue and run the patch commands manually... & set ERRORLEVEL=0 & echo ERROR: PRE-PATCH Script Ended in Error. Check the Log. >> %LOG_FILE%  & PAUSE
+call spbat.bat -phase apply -oracle_home %ORACLE_HM% -log_dir %SCRIPTS%
 IF     ERRORLEVEL 1 echo PATCH failed. Check the issue and run the patch commands manually... & set ERRORLEVEL=0 & echo ERROR: PATCH Script Ended in Error. Check the Log. >> %LOG_FILE%  & PAUSE
 
 endlocal
@@ -38,10 +38,3 @@ echo ==========================================================
 echo PATCHING FINISHED ! PLEASE CHECK LOGS.
 echo ==========================================================
 set ERRORLEVEL=0
-rem :SYSTEMERR
-rem echo ERROR: PRE-Patch FAILED !!! Check the Log. >> %LOG_FILE%
-
-rem GOTO END
-
-rem :END
-

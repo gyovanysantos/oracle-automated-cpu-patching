@@ -1,5 +1,5 @@
 @echo off
-rem Call D:\scripts\automatedPatching\setAutoPatchEnv.bat
+:: Call D:\scripts\automatedPatching\setAutoPatchEnv.bat
 
 echo ============================================= >> %LOG_FILE%
 echo REPLACING JAVA INSTALLS >> %LOG_FILE%
@@ -9,7 +9,7 @@ echo REPLACING JAVA INSTALLS
 echo =============================================
 
 %drive%
-REM Rename Java Dirs
+:: Rename Java Dirs
 echo Deleting OLD JDK Dir >> %LOG_FILE%
 echo Deleting OLD JDK Dir
 rmdir /Q /S %JDK_PATH%.old & set ERRORLEVEL=0 >> %LOG_FILE%				
@@ -20,7 +20,7 @@ ren %JDK_NAME% %JDK_NAME%.old >> %LOG_FILE%
 IF NOT ERRORLEVEL 1 echo SUCCESS: JDK folder renamed to OLD >> %LOG_FILE%
 IF     ERRORLEVEL 1 echo Replace Script failed. Check the issue and press any key to continue... & set ERRORLEVEL=0 & echo ERROR: Replace Script Ended in Error. Check the Log. >> %LOG_FILE%  & PAUSE
 
-REM REMOVING CONTENT FROM ORIGINAL JDK AGENT FOLDER
+:: REMOVING CONTENT FROM ORIGINAL JDK AGENT FOLDER
 echo Deleting OLD JDK Agent Dir >> %LOG_FILE%
 echo Deleting OLD JDK Agent Dir
 rmdir /Q /S %JDK_AGENT_PATH%.old & set ERRORLEVEL=0 >> %LOG_FILE%											 
@@ -59,7 +59,7 @@ IF     ERRORLEVEL 1 echo Replace Script failed. Check the issue and press any ke
 echo: >> %LOG_FILE%
 echo --------------------------------------------- >> %LOG_FILE%
 echo: >> %LOG_FILE%
-rem REPLACE Agent Security Folder
+:: REPLACE Agent Security Folder
 echo REPLACE Agent Security Folder >> %LOG_FILE%
 echo REPLACE Agent Security Folder
 cd %JDK_AGENT_PATH%\jre\lib\security
@@ -82,9 +82,3 @@ echo ===========================================================
 echo REPLACE DONE SUCCESSFULLY ! THE PATCHES CAN BE APPLIED NOW!
 echo ===========================================================
 set ERRORLEVEL=0
-rem :SYSTEMERR
-rem echo ERROR: Replace Script Failed !!! Check the Log. >> %LOG_FILE%
-
-rem GOTO END
-
-rem :END
