@@ -59,7 +59,7 @@ set JRE_NAME=jre
 set WRK_DIR=C:\AutoPatchCPU
 
 :: Deployment Shared Working Directory. This path should be shared on the network and accessible from all servers. This is where the patches will be copied from.
-set DEP_REPO=\\Mqs-pd-jdp02\CPU_AUTOPATCH
+set DEP_REPO=\\<DEP_HOSTNAME>\CPU_AUTOPATCH
 
 :: !!!NO NEED TO CHANGE FROM HERE BELOW!!!
 :: WLS Patching Directory
