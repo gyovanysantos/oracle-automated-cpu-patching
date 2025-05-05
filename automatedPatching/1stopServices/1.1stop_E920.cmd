@@ -1,6 +1,6 @@
 :: Call D:\scripts\automatedPatching\setAutoPatchEnv.bat
 Call %DOMAIN_OHM%\bin\setDomainEnv.cmd
-
+::test
 echo =============================================  >> %LOG_FILE%
 echo STOPPING SERVICES >> %LOG_FILE%
 echo ============================================= >> %LOG_FILE%
