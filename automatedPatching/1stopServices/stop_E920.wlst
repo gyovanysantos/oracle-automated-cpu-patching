@@ -5,3 +5,4 @@ nmKill('JWEB01_JAS_PD920')
 nmKill('JWEB01_AIS_PD920')
 stopNodeManager()
 exit()
+::test
