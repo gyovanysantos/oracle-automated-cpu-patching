@@ -71,10 +71,6 @@ set JAVA=%WRK_DIR%\Java
 :: Java Updated
 set JAVA_UPDATED=%WRK_DIR%\Java\jdk
 
-:: Patching Path
-:: set WLS_PATCH=%WLS%\WLS_SPB_WORK\tools\spbat\generic\SPBAT
-
-
 
 
 
