@@ -30,14 +30,10 @@ automatedPatching/
    - Review the `WLS_PSU_14.1.1.0.0_README.pdf` for Oracle patch details.
 2. **Set Environment:**
    - Run `setAutoPatchEnv.bat` to configure environment variables.
-3. **Stop Services:**
-   - Use scripts in `1stopServices/` to stop WebLogic and related services.
-4. **Backup Directories:**
-   - Execute `2backupDir/2backupDir.bat` to back up important directories.
-5. **Apply Patches:**
-   - Run `autoPatch.bat` or scripts in `5patchApply/` to apply patches and upgrade Java.
-6. **Restart Services:**
-   - Start services as needed after patching.
+3. **Run autoPatch script:**
+   - Open CMD as an Administrator, Go to automatedPatching directory and Run `autoPatch.bat`.
+4. **Check the logs and Start Services:**
+   - The Default path for the logs is inside automatedPatching directory. You will find there the full log for all the steps done and for pre-check and apply phase from SPBAT patching. Start services as needed after patching and do the surface tests.
 
 ## Notes
 - Test all scripts in a non-production environment before applying to production.
