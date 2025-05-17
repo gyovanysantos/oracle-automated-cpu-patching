@@ -1,5 +1,4 @@
 @echo off
-:: Call D:\scripts\automatedPatching\setAutoPatchEnv.bat
 
 set JAVA_STAGE=%JAVA%\JAVA_STAGE
 echo ============================================= >> %LOG_FILE%
