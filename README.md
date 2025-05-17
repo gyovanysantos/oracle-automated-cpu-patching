@@ -29,6 +29,7 @@ automatedPatching/
 1. **Review Prerequisites:**
    - Ensure you have the necessary permissions.
    - Ensure you have enough space locally for the backups and patch files.
+   - Make sure you have 7-zip installed for extracting the patch files.
    - Create and share a folder in Deployment Server called CPU_AUTOPATCH. Create the sub directories Java and WLS, upload the .zip files inside each respective directory.
    - The NodeManager for the Oracle_Home should have the QuitEnabled=true in nodemanager.properties
 2. **Set Environment:**
