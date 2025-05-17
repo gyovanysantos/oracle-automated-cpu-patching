@@ -1,5 +1,4 @@
 @echo off
-:: Call D:\scripts\automatedPatching\setAutoPatchEnv.bat
 				 
 :: Stopping the Service
 echo Stopping Node Manager service >> %LOG_FILE%
