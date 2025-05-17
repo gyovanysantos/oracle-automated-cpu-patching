@@ -20,7 +20,7 @@ set NM_SVC="Oracle Weblogic base_domain NodeManager (C_Oracle_MIDDLE~1_ORACLE~1_
 set NM_ADM="Oracle Weblogic base_domain_AdminServer"
 
 :: Scripts Directory
-set SCRIPTS=C:\Scripts\automatedPatching
+set SCRIPTS=%drive%\Scripts\automatedPatching
 
 :: Where to place backups. If not created, the script will create it for you.
 set BACKUP_DIR=C:\BACKUP
