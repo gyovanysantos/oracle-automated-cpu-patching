@@ -1,5 +1,4 @@
 @echo off
-:: Call D:\scripts\automatedPatching\setAutoPatchEnv.bat
 
 echo ========================================================== >> %LOG_FILE%
 echo STARTING PRE-PATCHING >> %LOG_FILE%
