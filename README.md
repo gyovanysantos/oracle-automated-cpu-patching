@@ -25,6 +25,8 @@ automatedPatching/
 ## Usage
 1. **Review Prerequisites:**
    - Ensure you have the necessary permissions and backups.
+   - Create and share a folder in Deployment Server called CPU_AUTOPATCH. Create the sub directories Java and WLS, upload the .zip diles inside each respective directory.
+   - The NodeManager for the Oracle_Home should have the QuitEnabled=true in nodemanager.properties
    - Review the `WLS_PSU_14.1.1.0.0_README.pdf` for Oracle patch details.
 2. **Set Environment:**
    - Run `setAutoPatchEnv.bat` to configure environment variables.
