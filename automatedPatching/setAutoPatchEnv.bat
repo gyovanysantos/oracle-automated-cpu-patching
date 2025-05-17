@@ -1,4 +1,6 @@
 @echo off
+
+:: This path below is usually default and you may not want to change it.
 set FORFILES="C:\Windows\System32\forfiles.exe"
 
 :: You should set the variables below according to your environment.
@@ -19,7 +21,7 @@ set NM_SVC="Oracle Weblogic base_domain NodeManager (C_Oracle_MIDDLE~1_ORACLE~1_
 :: Oracle Admin Server Service. If Admin Server is not installed as a service, then you should go to 1stopWindowsServices.cmd file and comment 'Stopping the Admin Service' session. If installed, Go to Windows Services, right click on the service and select properties. Copy the name of the service from there.
 set NM_ADM="Oracle Weblogic base_domain_AdminServer"
 
-:: Scripts Directory
+:: Scripts Directory.
 set SCRIPTS=%drive%\Scripts\automatedPatching
 
 :: Where to place backups. If not created, the script will create it for you.
