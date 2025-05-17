@@ -3,7 +3,7 @@
 ## Overview
 This repository provides scripts and automation tools for System Administrators to streamline the process of patching Oracle WebLogic Server and upgrading Java. The goal is to ensure secure, consistent, and efficient patch management in enterprise environments. The scripts are based on Oracle recommendations for applying SPBAT patches. 
 The main script autoPatch.bat will call the sub scripts for Stop Services, Backups, Work with files, Replacing and Patch apply. 
-The scripts should be upload Locally on the server that will be patched, and the patch files (SPBAT fow WLS and Java) are called from an Administrative Server (usually DEP Server), so you may want to be sure you have the files uploaded there as described below, and the respective directory SHARED.
+The scripts should be uploaded locally on the server that will be patched, and the patch files (SPBAT for WLS, and Java) are called from an Administrative Server (usually DEP Server), so you may want to be sure you have the files uploaded there as described below, and the respective directory SHARED.
 
 ## Features
 - Automated patching of Oracle WebLogic Server
