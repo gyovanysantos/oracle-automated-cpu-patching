@@ -1,5 +1,5 @@
 @echo off
-:: Call D:\scripts\automatedPatching\setAutoPatchEnv.bat
+
 set BACKUPCMD=xcopy /s /c /d /e /h /i /r /y
 
 echo ============================================= >> %LOG_FILE%
