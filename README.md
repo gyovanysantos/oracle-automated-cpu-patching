@@ -1,4 +1,4 @@
-# Oracle Automated CPU Patching
+# Oracle Automated CPU Patching for Windows
 
 ## Overview
 This repository provides scripts and automation tools for System Administrators to streamline the process of patching Oracle WebLogic Server and upgrading Java. The goal is to ensure secure, consistent, and efficient patch management in enterprise environments. The scripts are based on Oracle recommendations for applying SPBAT patches.
@@ -25,15 +25,14 @@ automatedPatching/
 ## Usage
 1. **Review Prerequisites:**
    - Ensure you have the necessary permissions and backups.
-   - Create and share a folder in Deployment Server called CPU_AUTOPATCH. Create the sub directories Java and WLS, upload the .zip diles inside each respective directory.
+   - Create and share a folder in Deployment Server called CPU_AUTOPATCH. Create the sub directories Java and WLS, upload the .zip files inside each respective directory.
    - The NodeManager for the Oracle_Home should have the QuitEnabled=true in nodemanager.properties
-   - Review the `WLS_PSU_14.1.1.0.0_README.pdf` for Oracle patch details.
 2. **Set Environment:**
    - Run `setAutoPatchEnv.bat` to configure environment variables.
 3. **Set Stop Scripts**
-   - You should custom your stop scripts according to your instances and Windows Services
+   - You should custom your stop scripts according to your instances and Windows Services. Take a look to commented sessions on those scripts to see how it works.
 3. **Run autoPatch script:**
-   - Open CMD as an Administrator, Go to automatedPatching directory and Run `autoPatch.bat`.
+   - Open CMD as an Administrator, Go to the scripts directory and Run `autoPatch.bat`.
 4. **Check the logs and Start Services:**
    - The Default path for the logs is inside automatedPatching directory. You will find there the full log for all the steps done and for pre-check and apply phase from SPBAT patching. Start services as needed after patching and do the surface tests.
      
