@@ -52,6 +52,15 @@ automatedPatching/
 - Review and update the `exclude.txt` file to customize backup exclusions.
 - Refer to Oracle documentation for patch-specific instructions.
 
+## Example of Administrative Server Shared path structure
+```
+CPU_AUTOPATCH/
+├── WLS               # Weblogic patch directory
+   ├── p37476485_122140_Generic.zip        # Sample of SPBAT path zip file
+├── Java              # Java patch directory
+   ├── p18143322_1800_MSWIN-x86-64.zip     # Sample of Java zip File
+```
+
 ## License
 This repository is intended for internal use by system administrators. Follow your organization’s policies and Oracle’s licensing terms.
 
