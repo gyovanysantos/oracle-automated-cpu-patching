@@ -3,5 +3,4 @@ nmConnect('weblogic','password',host='localhost', port='5556',domainName='base_d
 nmKill('JWEB01_JAS_PD920')
 nmKill('JWEB01_JAS_PD920')
 nmKill('JWEB01_AIS_PD920')
-stopNodeManager()
 exit()
